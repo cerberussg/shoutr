@@ -1,0 +1,29 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: shoutr_development
+  username: postgres
+  password: <%= ENV['DEV_DB_PASSWORD'] %>
+  host: localhost
+  port: 5433
+
+test:
+  <<: *default
+  database: shoutr_test
+  username: postgres
+  password: <%= ENV['DEV_DB_PASSWORD'] %>
+  host: localhost
+  port: 5433
+
+production:
+  <<: *default
+  database: shoutr_production
+  username: shoutr
+  password: <%= ENV['SHOUTR_DATABASE_PASSWORD'] %>

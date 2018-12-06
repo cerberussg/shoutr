@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'clearance', '~> 1.16', '>= 1.16.1'
 gem 'dotenv-rails', '~> 2.5'
+gem 'paperclip', '~> 6.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

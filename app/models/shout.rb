@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Shout Class: base class for our shouts
 class Shout < ApplicationRecord
   belongs_to :user
   belongs_to :content, polymorphic: true

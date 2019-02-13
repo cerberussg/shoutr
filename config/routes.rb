@@ -5,13 +5,8 @@ Rails.application.routes.draw do
   root to: 'homes#show'
   resources :shouts, only: %i[create show] do
     member do
-<<<<<<< HEAD
       post 'like', to: 'likes#create'
       delete 'unlike', to: 'likes#destroy'
-=======
-      post 'like' => 'likes#create'
-      delete 'unlike' => 'likes#destroy'
->>>>>>> f9a1717fcd482222802c02382cdabb4731fa47cd
     end
   end
   resources :passwords, controller: 'clearance/passwords', only: %i[create new]

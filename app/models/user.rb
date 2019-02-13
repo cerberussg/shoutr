@@ -17,11 +17,8 @@ class User < ApplicationRecord
   def liked?(shout)
     liked_shout_ids.include?(shout.id)
   end
-<<<<<<< HEAD
-=======
 
   def to_param
     username
   end
->>>>>>> f9a1717fcd482222802c02382cdabb4731fa47cd
 end

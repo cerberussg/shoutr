@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   constraints Clearance::Constraints::SignedIn.new do
     root to: 'dashboards#show'

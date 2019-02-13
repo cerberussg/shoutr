@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ShoutHelper
   def like_button(shout)
     if current_user.liked?(shout)
